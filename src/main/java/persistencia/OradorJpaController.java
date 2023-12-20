@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package persistencia;
 
 import jakarta.persistence.EntityManager;
@@ -13,7 +16,10 @@ import java.util.List;
 import logica.Orador;
 import persistencia.exceptions.NonexistentEntityException;
 
-
+/**
+ *
+ * @author matiambrosi
+ */
 public class OradorJpaController implements Serializable {
 
     public OradorJpaController(EntityManagerFactory emf) {
@@ -26,7 +32,7 @@ public class OradorJpaController implements Serializable {
     }
     
     public OradorJpaController() {
-        emf = Persistence.createEntityManagerFactory("integradorJava_Cac_PU") ;
+        emf = Persistence.createEntityManagerFactory("integradorjavaPU");
     }
 
     public void create(Orador orador) {
