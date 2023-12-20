@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 public class Orador implements Serializable {
@@ -21,12 +21,12 @@ public class Orador implements Serializable {
     private String mail;
     private String tema;
     @Temporal (TemporalType.DATE)
-    private Date fecha_alta;
+    private LocalDate fecha_alta;
 
     public Orador() {
     }
 
-    public Orador(int id_orador, String nombre, String apellido, String mail, String tema, Date fecha_alta) {
+    public Orador(int id_orador, String nombre, String apellido, String mail, String tema, LocalDate fecha_alta) {
         this.id_orador = id_orador;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -75,11 +75,11 @@ public class Orador implements Serializable {
         this.tema = tema;
     }
 
-    public Date getFecha_alta() {
+    public LocalDate getFecha_alta() {
         return fecha_alta;
     }
 
-    public void setFecha_alta(Date fecha_alta) {
+    public void setFecha_alta(LocalDate fecha_alta) {
         this.fecha_alta = fecha_alta;
     }
     
