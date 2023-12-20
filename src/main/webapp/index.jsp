@@ -113,24 +113,29 @@
 
     <!--Contenedor 5 Formulario-->
 
-    <div class="container-fluid" style="width: 600px;">
+    <form class="container-fluid" style="width: 600px;" action="SvOrador" method="POST">
         <div class="row d-flex justify-content-center text-center">Conviertete en un<h2>ORADOR</h2></div>
         <p class="text-center">Anotate como orador para dar una charla ingnite. CuÃ©ntanos de que queres hablar!</p>
         <div class="row p-3">
             <div class="col">
-            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+            <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" name="nombre">
             </div>
             <div class="col">
-            <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+            <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" name="apellido">
             </div>
         </div>
+        <div class="row pb-3 ms-3 me-3">
+            <input type="text" class="form-control" placeholder="Mail" aria-label="Mail" name="mail">
+        </div>
         <div class="row form-floating ms-3 me-3">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="tema"></textarea>
             <label for="floatingTextarea2">Sobre que queres hablar?</label>
         </div>
         <p class="row ms-3 text-secondary">Recuerda incluir un titulo para tu charla</p>
-        <a href="#" class="row btn btn-success d-flex justify-content-center m-3">Enviar</a>
-    </div>
+        <div class="d-grid">
+            <button href="#" class="btn btn-success mb-3 ms-3 me-3" type="submit">Enviar</button>
+        </div>
+    </form>
 
     <!--Footer-->
 
